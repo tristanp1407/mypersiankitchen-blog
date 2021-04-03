@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import imageUrlBuilder from "@sanity/image-url";
+import * as S from '../styles/home.styles'
+
+const builder = imageUrlBuilder(sanityClient);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
@@ -25,16 +32,15 @@ export default function AllPosts() {
 
   return (
     <div>
-      <h2>Blog Posts</h2>
-      <h3>Welcome to my blog posts page!</h3>
+      <S.Title>Blog Posts</S.Title>
       <div>
         {allPostsData &&
           allPostsData.map((post, index) => (
             <Link to={"/" + post.slug.current} key={post.slug.current}>
               <span key={index}>
-                <img src={post.mainImage.asset.url} alt="" />
+                <img src={urlFor(post.mainImage).width(500).url()} alt="" />
                 <span>
-                  <h2>{post.title}</h2>
+                  <S.Title>{post.title}</S.Title>
                 </span>
               </span>
             </Link>
