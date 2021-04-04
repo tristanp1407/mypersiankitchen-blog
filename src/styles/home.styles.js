@@ -1,26 +1,5 @@
-import styled, {createGlobalStyle} from "styled-components"
+import styled from "styled-components"
 
-createGlobalStyle`
- @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap');
- 
- 
- p {
-    padding: 0;
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    font-size: 2rem;
-  }
-
-  body {
-    padding: 0;
-    margin: 0;
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-family: 'Playfair Display', serif;
-  }
-`
 
 export const Page = styled('div')`
     display: flex;
@@ -38,13 +17,14 @@ export const LogoContainer = styled('div')`
 `
 
 export const BorderBox = styled('div')`
-    width: 35%;
-    min-width: 400px;
-    border: 2px solid rgba(0,0,0,.671);
-    padding: 30px;
-    margin: 50px;
+    width: 70%;
+    max-width: 500px;
+    font-size: 120%;
     text-align: center;
-
+    line-height: 35px;
+    padding: 30px;
+    margin: 20px 10px 80px 10px;
+    border: 2px solid rgba(0, 0, 0, 0.671)
 `
 
 export const Button = styled('button')`
@@ -65,25 +45,16 @@ export const Button = styled('button')`
     }
 `
 
-export const Title = styled('h1')`
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap');   
-    font-size: 3.5rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-`
+
 
 export const TextWrapper = styled('div')`
-    max-width: 50rem;
+    width: 85%;
+    max-width: 700px;
+    line-height: 33px;
+    letter-spacing: 0.6px;
+    font-size: 110%;
     text-align: center;
-`
-
-export const Body = styled('p')`
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap');   
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    line-height: 2.5rem;
-    font-size: 1.25rem;
-    letter-spacing: 0.025rem;
+    margin: 20px 0
 `
 
 export const Galery = styled('div')`

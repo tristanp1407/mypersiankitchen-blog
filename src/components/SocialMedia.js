@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from '../styles/social_media.styles'
+import * as T from '../styles/text.styles'
 
 import facebook from '../Assets/Icons/Social/fb_logo.png'
 import deliveroo from '../Assets/Icons/Social/deliveroo_logo.png'
@@ -12,7 +13,7 @@ export default function SocialMedia() {
 
     return (
     <S.Wrapper>
-        <h3>Follow Us:</h3>
+        <T.P>Follow Us:</T.P>
         <S.LogosWrapper>
             <div><img src={facebook}/></div>
             <div><img src={deliveroo}/></div>

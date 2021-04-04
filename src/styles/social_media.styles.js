@@ -2,12 +2,12 @@ import styled from 'styled-components'
 
 
 export const Wrapper = styled('div')`
-    margin-top: 5px;
+    margin-top: 25px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 `
 
 export const LogosWrapper = styled('div')`
@@ -28,6 +28,7 @@ export const LogosWrapper = styled('div')`
         width: 100%;
         height: 100%;
         transition: transform 0.3s ease;
+        cursor: pointer;
 
         &:hover{
             transform: scale(1.2);

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import * as S from '../styles/home.styles'
+import * as T from '../styles/text.styles'
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -32,7 +33,7 @@ export default function AllPosts() {
 
   return (
     <div>
-      <S.Title>Blog Posts</S.Title>
+      <T.Title>Blog Posts</T.Title>
       <div>
         {allPostsData &&
           allPostsData.map((post, index) => (
@@ -40,7 +41,7 @@ export default function AllPosts() {
               <span key={index}>
                 <img src={urlFor(post.mainImage).width(500).url()} alt="" />
                 <span>
-                  <S.Title>{post.title}</S.Title>
+                  <T.Title>{post.title}</T.Title>
                 </span>
               </span>
             </Link>
