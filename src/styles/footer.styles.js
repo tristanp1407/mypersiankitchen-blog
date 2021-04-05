@@ -27,7 +27,9 @@ export const IconAndText = styled('div')`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 10px;
     cursor: pointer;
+    font-weight: 300;
 
     &:hover {
         color: rgb(224, 224, 224)
@@ -48,6 +50,7 @@ export const AdressLine = styled('div')`
     width: max-content;
     margin: 15px 0 8px 0;
     cursor: pointer;
+    font-weight: 300;
 
     &:hover {
         color: rgb(224, 224, 224);
@@ -55,6 +58,7 @@ export const AdressLine = styled('div')`
 
     & img {
         margin-top: auto;
+        margin-right: 10px;
         height: 35px; 
     }
 `

@@ -12,7 +12,7 @@ import mpk28 from '../Assets/Gallery/mpk28.jpg'
 import mpk22 from '../Assets/Gallery/mpk22.jpg'
 
 import React, {Component} from 'react'
-import * as S from '../styles/gallery.styles'
+import * as S from '../styles/Gallery.styles'
 
 
 let galleryImages1 =[mpk15 , mpk10 , mpk9 , mpk27 , mpk6 , mpk29];

@@ -1,6 +1,6 @@
 import React from 'react'
-import * as S from '../styles/social_media.styles'
-import * as T from '../styles/text.styles'
+import * as S from '../styles/FollowUs.styles'
+import * as T from '../styles/Text.styles'
 
 import facebook from '../Assets/Icons/Social/fb_logo.png'
 import deliveroo from '../Assets/Icons/Social/deliveroo_logo.png'

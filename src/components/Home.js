@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 // import sanityClient from "../client.js";
-import * as S from "../styles/home.styles";
-import * as T from '../styles/text.styles'
+import * as S from "../styles/Home.styles";
+import * as T from '../styles/Text.styles'
 import Logo from './Logo'
 import AllPosts from "./AllPosts"
 import Gallery from './PhotoGalleries'
-import SocialMedia from './SocialMedia'
+import SocialMedia from './FollowUs'
 import {gallery1, gallery2} from './PhotoGalleries'
 import FacebookPlugin from './FacebookPlugin'
 import Footer from './Footer'

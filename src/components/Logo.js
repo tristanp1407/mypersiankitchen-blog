@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from '../styles/logo.styles'
+import * as S from '../styles/Logo.styles'
 import MpkLogo from '../Assets/Logo/mpk_logo.png'
 
 

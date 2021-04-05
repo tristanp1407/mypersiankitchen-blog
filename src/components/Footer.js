@@ -1,6 +1,6 @@
 import React from 'react'
-import * as S from '../styles/footer.styles'
-import * as T from '../styles/text.styles'
+import * as S from '../styles/Footer.styles'
+import * as T from '../styles/Text.styles'
 import phoneIcon from '../Assets/Icons/Contact/phone.png'
 import emailIcon from '../Assets/Icons/Contact/email.png'
 import pinIcon from '../Assets/Icons/Contact/location.png'
