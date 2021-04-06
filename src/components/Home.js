@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-// import sanityClient from "../client.js";
+import React from "react";
+import Menu from '../Assets/Menu/mpk-menu-2020.pdf'
 import * as S from "../styles/Home.styles";
 import * as T from '../styles/Text.styles'
 import Logo from './Logo'
@@ -11,6 +11,9 @@ import FacebookPlugin from './FacebookPlugin'
 import Footer from './Footer'
 
 export default function Home() {
+    const downloadMenu = () => {
+        window.open(Menu, "_blank")
+    }
 
 
 
@@ -22,18 +25,17 @@ export default function Home() {
                 To place a hot food order we request 24 hours notice
                 <br/> ...Persian slow-cooked food can't be rushed!
                 <br />
+                <br />
                 We offer a free 6 mile radius delivery service from Cambridge centre,
                 all details in the menu.
                 <br />
-                <br />We are closed for the Easter Weekend - Happy Easter to you all!
-                
                 <br />
                 <br />Nooshe Joon! 
                 <br />"May it be sweet for your soul" 
                 <br />
                 <br />
             </T.P>
-            <S.Button>Download Menu</S.Button>
+            <S.Button onClick={downloadMenu}>Download Menu</S.Button>
         </S.BorderBox>
 
         <T.Title>About Us</T.Title>
@@ -47,11 +49,12 @@ export default function Home() {
 
         <SocialMedia/>
 
-        <T.Title>About Us</T.Title>
+        <T.Title>Hire Us</T.Title>
 
         <S.TextWrapper>
             <T.P>
-                Offering modern and traditional Persian food, My Persian Kitchen brings to Cambridge one of the greatest, but least known, cuisines of the world. At MPK our aim is to share the food we love and offer creative and diverse dishes, which are nutritious, tantalising, and pleasing to all palates. We use the best local suppliers and the freshest ingredients in our dishes which, when possible, are supplemented with seasonal herbs and vegetables that we grow on our very own plot.
+            Whether you’re having a gathering at home, throwing a party or hosting an event at work, we are available for private hire. Offering a refined Persian menu we cater for all occasions. We are Cambridge based, but happy to travel. To discuss your event please
+get in touch!            
             </T.P>
         </S.TextWrapper>
         
@@ -59,11 +62,11 @@ export default function Home() {
         
         <SocialMedia/>
 
-        <T.Title>About Us</T.Title>
+        <T.Title>Pop-Ups</T.Title>
 
         <S.TextWrapper>
             <T.P>
-                Offering modern and traditional Persian food, My Persian Kitchen brings to Cambridge one of the greatest, but least known, cuisines of the world. At MPK our aim is to share the food we love and offer creative and diverse dishes, which are nutritious, tantalising, and pleasing to all palates. We use the best local suppliers and the freshest ingredients in our dishes which, when possible, are supplemented with seasonal herbs and vegetables that we grow on our very own plot.
+                My Persian Kitchen pop-ups are events held on a monthly basis to showcase Persian cuisine throughout Cambridgeshire – see below for upcoming events.
             </T.P>
         </S.TextWrapper>
 
@@ -71,10 +74,13 @@ export default function Home() {
    
         <SocialMedia/>
 
-        <Footer/>
+        
+        <T.Title>MPK Blog Articles</T.Title>
 
         <AllPosts/>
 
+
+        <Footer/>
 
     </S.Page>
   );

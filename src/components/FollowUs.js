@@ -11,15 +11,27 @@ import whatsapp from '../Assets/Icons/Social/whatsapp_logo.png'
 
 export default function SocialMedia() {
 
+    const openLink = (link) => {
+        window.open(link, "_blank")
+    }
+
+    let socialMediaLinks = {
+        facebook: "https://www.facebook.com/mypersiankitchencamb/",
+        instagram: "https://www.instagram.com/my.persiankitchen/",
+        twitter: 'https://twitter.com/mypersiancamb?lang=en',
+        whatsapp: "https://wa.me/00447580801905",
+        deliveroo: "https://deliveroo.co.uk/menu/cambridge/cambridge-centre/my-persian-kitchen"
+    }
+
     return (
     <S.Wrapper>
         <T.P>Follow Us:</T.P>
         <S.LogosWrapper>
-            <div><img src={facebook}/></div>
-            <div><img src={deliveroo}/></div>
-            <div><img src={instagram}/></div>
-            <div><img src={twitter}/></div>
-            <div><img src={whatsapp}/></div>
+            <div onClick={()=>openLink(socialMediaLinks.facebook)}><img src={facebook}/></div>
+            <div onClick={()=>openLink(socialMediaLinks.deliveroo)}><img src={deliveroo}/></div>
+            <div onClick={()=>openLink(socialMediaLinks.instagram)}><img src={instagram}/></div>
+            <div onClick={()=>openLink(socialMediaLinks.twitter)}><img src={twitter}/></div>
+            <div onClick={()=>openLink(socialMediaLinks.whatsapp)}><img src={whatsapp}/></div>
         </S.LogosWrapper>
     </S.Wrapper>
     )

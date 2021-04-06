@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import * as S from '../styles/OnePost.styles'
+import * as T from '../styles/Text.styles'
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -38,25 +40,34 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <div>
-      <div>
-        <h2>{postData.title}</h2>
-        <div>
+    <S.OneBlogWrapper>
+      <S.TitleAuthorWrapper>
+
+        <T.Title>{postData.title}</T.Title>
+  
+        <S.AuthorWrapper>
           <img
             src={urlFor(postData.authorImage).width(100).url()}
-            alt="Author is Kap"
+            alt="Author Photo"
           />
-          <h4>{postData.name}</h4>
-        </div>
-      </div>
-      <img src={urlFor(postData.mainImage).width(500).url()} alt="" />
-      <div>
+          <T.P>{postData.name}</T.P>
+        </S.AuthorWrapper>
+
+      </S.TitleAuthorWrapper>
+
+      <S.MainImageWrapper>
+        <img src={urlFor(postData.mainImage).width(1000).url()} alt="" />
+      </S.MainImageWrapper>
+
+      <S.BlogBodyWrapper>
         <BlockContent
           blocks={postData.body}
           projectId={sanityClient.clientConfig.projectId}
           dataset={sanityClient.clientConfig.dataset}
         />
-      </div>
-    </div>
+      </S.BlogBodyWrapper>
+    </S.OneBlogWrapper>
+
+    
   );
 }

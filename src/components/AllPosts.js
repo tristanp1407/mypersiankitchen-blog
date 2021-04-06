@@ -33,22 +33,21 @@ export default function AllPosts() {
 
   return (
     <S.AllPostsWrapper>
-      <T.Title>Blog Posts</T.Title>
       
         {allPostsData &&
           allPostsData.map((post, index) => (
+          
+      <Link to={"/" + post.slug.current} key={post.slug.current} key={index}>
 
-      <S.BlogTile>
-
-          <Link to={"/" + post.slug.current} key={post.slug.current} key={index}>
-
+          <S.BlogTile>
+            
               <S.BlogTileImage src={urlFor(post.mainImage).width(330).url()} alt="" />
           
               <S.BlogTitle>{post.title}</S.BlogTitle>
 
-          </Link>
+          </S.BlogTile>
 
-      </S.BlogTile>
+      </Link>
 
           ))}
       

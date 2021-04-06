@@ -37,6 +37,7 @@ export const Button = styled('button')`
     margin-top: 20px;
     margin-bottom: auto;
     cursor: pointer;
+    outline: 0;
 
     &:active,
     &:hover{
