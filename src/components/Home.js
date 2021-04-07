@@ -1,87 +1,95 @@
 import React from "react";
-import Menu from '../Assets/Menu/mpk-menu-2020.pdf'
+import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
 import * as S from "../styles/Home.styles";
-import * as T from '../styles/Text.styles'
-import Logo from './Logo'
-import AllPosts from "./AllPosts"
-import Gallery from './PhotoGalleries'
-import SocialMedia from './FollowUs'
-import {gallery1, gallery2} from './PhotoGalleries'
-import FacebookPlugin from './FacebookPlugin'
-import Footer from './Footer'
+import * as T from "../styles/Text.styles";
+import Logo from "./Logo";
+import AllPosts from "./AllPosts";
+import Gallery from "./PhotoGalleries";
+import SocialMedia from "./FollowUs";
+import { gallery1, gallery2 } from "./PhotoGalleries";
+import FacebookPlugin from "./FacebookPlugin";
+import Footer from "./Footer";
 
 export default function Home() {
-    const downloadMenu = () => {
-        window.open(Menu, "_blank")
-    }
-
-
+  const downloadMenu = () => {
+    window.open(Menu, "_blank");
+  };
 
   return (
     <S.Page>
-        <Logo/>
-        <S.BorderBox>
-            <T.P>
-                To place a hot food order we request 24 hours notice
-                <br/> ...Persian slow-cooked food can't be rushed!
-                <br />
-                <br />
-                We offer a free 6 mile radius delivery service from Cambridge centre,
-                all details in the menu.
-                <br />
-                <br />
-                <br />Nooshe Joon! 
-                <br />"May it be sweet for your soul" 
-                <br />
-                <br />
-            </T.P>
-            <S.Button onClick={downloadMenu}>Download Menu</S.Button>
-        </S.BorderBox>
+      <Logo />
+      <S.BorderBox>
+        <T.P>
+          To place a hot food order we request 24 hours notice
+          <br /> ...Persian slow-cooked food can't be rushed!
+          <br />
+          <br />
+          We offer a free 6 mile radius delivery service from Cambridge centre,
+          all details in the menu.
+          <br />
+          <br />
+          <br />
+          Nooshe Joon!
+          <br />
+          "May it be sweet for your soul"
+          <br />
+          <br />
+        </T.P>
+        <S.Button onClick={downloadMenu}>Download Menu</S.Button>
+      </S.BorderBox>
 
-        <T.Title>About Us</T.Title>
-        <S.TextWrapper>
-            <T.P>
-                Offering modern and traditional Persian food, My Persian Kitchen brings to Cambridge one of the greatest, but least known, cuisines of the world. At MPK our aim is to share the food we love and offer creative and diverse dishes, which are nutritious, tantalising, and pleasing to all palates. We use the best local suppliers and the freshest ingredients in our dishes which, when possible, are supplemented with seasonal herbs and vegetables that we grow on our very own plot.
-            </T.P>
-        </S.TextWrapper>
+      <T.Title>About Us</T.Title>
+      <S.TextWrapper>
+        <T.P>
+          Offering modern and traditional Persian food, My Persian Kitchen
+          brings to Cambridge one of the greatest, but least known, cuisines of
+          the world. At MPK our aim is to share the food we love and offer
+          creative and diverse dishes, which are nutritious, tantalising, and
+          pleasing to all palates. We use the best local suppliers and the
+          freshest ingredients in our dishes which, when possible, are
+          supplemented with seasonal herbs and vegetables that we grow on our
+          very own plot.
+        </T.P>
+      </S.TextWrapper>
 
-        <Gallery gallery={gallery1}/>
+      <Gallery gallery={gallery1} />
 
-        <SocialMedia/>
+      <SocialMedia />
 
-        <T.Title>Hire Us</T.Title>
+      <T.Title>Hire Us</T.Title>
 
-        <S.TextWrapper>
-            <T.P>
-            Whether you’re having a gathering at home, throwing a party or hosting an event at work, we are available for private hire. Offering a refined Persian menu we cater for all occasions. We are Cambridge based, but happy to travel. To discuss your event please
-get in touch!            
-            </T.P>
-        </S.TextWrapper>
-        
-        <Gallery gallery={gallery2}/>
-        
-        <SocialMedia/>
+      <S.TextWrapper>
+        <T.P>
+          Whether you’re having a gathering at home, throwing a party or hosting
+          an event at work, we are available for private hire. Offering a
+          refined Persian menu we cater for all occasions. We are Cambridge
+          based, but happy to travel. To discuss your event please get in touch!
+        </T.P>
+      </S.TextWrapper>
 
-        <T.Title>Pop-Ups</T.Title>
+      <Gallery gallery={gallery2} />
 
-        <S.TextWrapper>
-            <T.P>
-                My Persian Kitchen pop-ups are events held on a monthly basis to showcase Persian cuisine throughout Cambridgeshire – see below for upcoming events.
-            </T.P>
-        </S.TextWrapper>
+      <SocialMedia />
 
-        <FacebookPlugin/>
-   
-        <SocialMedia/>
+      <T.Title>Pop-Ups</T.Title>
 
-        
-        <T.Title>MPK Blog Articles</T.Title>
+      <S.TextWrapper>
+        <T.P>
+          My Persian Kitchen pop-ups are events held on a monthly basis to
+          showcase Persian cuisine throughout Cambridgeshire – see below for
+          upcoming events.
+        </T.P>
+      </S.TextWrapper>
 
-        <AllPosts/>
+      <FacebookPlugin />
 
+      <SocialMedia />
 
-        <Footer/>
+      <T.Title>MPK Blog Article</T.Title>
 
+      <AllPosts />
+
+      <Footer />
     </S.Page>
   );
 }
