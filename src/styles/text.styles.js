@@ -9,6 +9,7 @@ export const P = styled('p')`
     line-height: 2.5rem;
     font-size: 1.25rem;
     letter-spacing: 0.025rem;
+    text-align: center;
 `
 
 export const Title = styled('h1')`

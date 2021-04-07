@@ -39,6 +39,10 @@ export const IconAndText = styled('div')`
         margin-top: auto;
         height: 35px;
     }
+
+    & div {
+        text-align: left;
+    }
 `
 
 export const AdressLine = styled('div')`
@@ -48,7 +52,7 @@ export const AdressLine = styled('div')`
     text-align: center;
     max-width: 80%;
     width: max-content;
-    margin: 15px 0 8px 0;
+    margin: 15px auto 8px auto;
     cursor: pointer;
     font-weight: 300;
 
@@ -60,6 +64,11 @@ export const AdressLine = styled('div')`
         margin-top: auto;
         margin-right: 10px;
         height: 35px; 
+    }
+
+    & div {
+        text-align: left;
+        width: 180px;
     }
 `
 

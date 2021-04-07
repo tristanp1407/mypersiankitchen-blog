@@ -8,6 +8,11 @@ import hygienRating from '../Assets/Icons/Contact/hygiene-rating.jpg'
 
 export default function Footer() {
 
+    const contactLinks = {
+        email: "mpkcontactus@gmail.com",
+
+    }
+
     return(
        <S.FooterBox>
            <T.H1>GET IN TOUCH!</T.H1>
@@ -17,12 +22,14 @@ export default function Footer() {
            <S.Contact>
                <S.IconAndText>
                    <img src={phoneIcon}/>
-                   <div>mpkcontactus@gmail.com</div>
+                   <a href="https://goo.gl/maps/U7k4Kxd9W2byyNST7">
+                    <div>mpkcontactus@gmail.com</div>
+                   </a>
                </S.IconAndText>
 
                <S.IconAndText>
                    <img src={emailIcon}/>
-                   <div>07580 801905</div>
+                   <a href="tel:+44580801905"><div>07580 801905</div></a>
                </S.IconAndText>
 
                
