@@ -7,12 +7,12 @@ export const OneBlogWrapper = styled('div')`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 50px;
 `
 
 export const TitleAuthorWrapper = styled('div')`
     justify-content: left;
-    width: 500px;
+    max-width: 500px;
+    width: 95vw;
 `
 
 export const AuthorWrapper = styled('div')`
@@ -33,9 +33,21 @@ export const MainImageWrapper = styled('div')`
     max-width: 1000px;
     width: 95vw;
     margin-bottom: 50px;
+
+    & img {
+        width: 100%;
+    }
 `
 export const BlogBodyWrapper = styled('div')`
-    max-width: 600px;
+    max-width: 700px;
+    width: 90%;
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap');   
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.025rem;
+    text-align: center;
 `
 
 
