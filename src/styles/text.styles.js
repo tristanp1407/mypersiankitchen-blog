@@ -17,7 +17,8 @@ export const Title = styled('h1')`
     font-size: 3.5rem;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
-    margin: 0 !important
+    margin: 0 !important;
+    text-align: center;
 `
 
 export const H1 = styled('h1')`

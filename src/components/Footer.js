@@ -8,9 +8,15 @@ import hygienRating from '../Assets/Icons/Contact/hygiene-rating.jpg'
 
 export default function Footer() {
 
-    const contactLinks = {
-        email: "mpkcontactus@gmail.com",
 
+    let contactLinks = {
+        email: "mpkcontactus@gmail.com",
+        phone: "tel:+447580801905",
+        map: "https://goo.gl/maps/U7k4Kxd9W2byyNST7"
+    }
+
+    const openLink = (link) => {
+        window.open(link, "_blank")
     }
 
     return(
@@ -20,22 +26,20 @@ export default function Footer() {
            <T.P>We'd love to hear from you. For all enquiries, please call us or email us:</T.P>
 
            <S.Contact>
-               <S.IconAndText>
-                   <img src={phoneIcon}/>
-                   <a href="https://goo.gl/maps/U7k4Kxd9W2byyNST7">
+               <S.IconAndText onClick={()=>openLink(contactLinks.email)}>
+                    <img src={emailIcon}/>
                     <div>mpkcontactus@gmail.com</div>
-                   </a>
                </S.IconAndText>
 
-               <S.IconAndText>
-                   <img src={emailIcon}/>
-                   <a href="tel:+44580801905"><div>07580 801905</div></a>
+               <S.IconAndText onClick={()=>openLink(contactLinks.phone)}>
+                   <img src={phoneIcon}/>
+                       <div>07580 801905</div>
                </S.IconAndText>
 
                
            </S.Contact>
 
-           <S.AdressLine>
+           <S.AdressLine onClick={()=>openLink(contactLinks.map)}>
                 <img src={pinIcon}/>
                 <div>Hope Street Yard, Hope St, Cambridge, CB1 3NA</div>
             </S.AdressLine>
