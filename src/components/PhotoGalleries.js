@@ -11,7 +11,7 @@ import mpk23 from '../Assets/Gallery/mpk23.jpg'
 import mpk28 from '../Assets/Gallery/mpk28.jpg'
 import mpk22 from '../Assets/Gallery/mpk22.jpg'
 
-import React, {Component} from 'react'
+import React from 'react'
 import * as S from '../styles/Gallery.styles'
 
 
