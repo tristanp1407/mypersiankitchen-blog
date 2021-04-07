@@ -1,60 +1,58 @@
-import React from 'react'
-import * as S from '../styles/Footer.styles'
-import * as T from '../styles/Text.styles'
-import phoneIcon from '../Assets/Icons/Contact/phone.png'
-import emailIcon from '../Assets/Icons/Contact/email.png'
-import pinIcon from '../Assets/Icons/Contact/location.png'
-import hygienRating from '../Assets/Icons/Contact/hygiene-rating.jpg'
+import React from "react";
+import * as S from "../styles/Footer.styles";
+import * as T from "../styles/Text.styles";
+import phoneIcon from "../Assets/Icons/Contact/phone.png";
+import emailIcon from "../Assets/Icons/Contact/email.png";
+import pinIcon from "../Assets/Icons/Contact/location.png";
+import hygienRating from "../Assets/Icons/Contact/hygiene-rating.jpg";
 
 export default function Footer() {
+  let contactLinks = {
+    email: "mpkcontactus@gmail.com",
+    phone: "tel:+447580801905",
+    map: "https://goo.gl/maps/U7k4Kxd9W2byyNST7",
+  };
 
+  const openLink = (link) => {
+    window.open(link, "_blank");
+  };
 
-    let contactLinks = {
-        email: "mpkcontactus@gmail.com",
-        phone: "tel:+447580801905",
-        map: "https://goo.gl/maps/U7k4Kxd9W2byyNST7"
-    }
+  return (
+    <S.FooterBox>
+      <T.H1>GET IN TOUCH!</T.H1>
 
-    const openLink = (link) => {
-        window.open(link, "_blank")
-    }
+      <T.P>
+        We'd love to hear from you. For all enquiries, please call us or email
+        us:
+      </T.P>
 
-    return(
-       <S.FooterBox>
-           <T.H1>GET IN TOUCH!</T.H1>
+      <S.Contact>
+        <S.IconAndText onClick={() => openLink(contactLinks.email)}>
+          <img alt="email icon" src={emailIcon} />
+          <div>mpkcontactus@gmail.com</div>
+        </S.IconAndText>
 
-           <T.P>We'd love to hear from you. For all enquiries, please call us or email us:</T.P>
+        <S.IconAndText onClick={() => openLink(contactLinks.phone)}>
+          <img alt="phone icon" src={phoneIcon} />
+          <div>07580 801905</div>
+        </S.IconAndText>
+      </S.Contact>
 
-           <S.Contact>
-               <S.IconAndText onClick={()=>openLink(contactLinks.email)}>
-                    <img src={emailIcon}/>
-                    <div>mpkcontactus@gmail.com</div>
-               </S.IconAndText>
+      <S.AdressLine onClick={() => openLink(contactLinks.map)}>
+        <img alt="pin icon" src={pinIcon} />
+        <div>Hope Street Yard, Hope St, Cambridge, CB1 3NA</div>
+      </S.AdressLine>
 
-               <S.IconAndText onClick={()=>openLink(contactLinks.phone)}>
-                   <img src={phoneIcon}/>
-                       <div>07580 801905</div>
-               </S.IconAndText>
+      <S.HygienRatingWrapper>
+        <img alt="hygiene-rating" src={hygienRating} />
+      </S.HygienRatingWrapper>
 
-               
-           </S.Contact>
-
-           <S.AdressLine onClick={()=>openLink(contactLinks.map)}>
-                <img src={pinIcon}/>
-                <div>Hope Street Yard, Hope St, Cambridge, CB1 3NA</div>
-            </S.AdressLine>
-            
-            <S.HygienRatingWrapper>
-                <img src={hygienRating}/>
-            </S.HygienRatingWrapper>
-
-            <S.Me>
-                <p>
-                    designed by Tristan Plet -  
-                    <a href="mailto:tristan.plet@gmail.com">tristan.plet@gmail.com</a>
-                </p>
-            </S.Me>
-
-       </S.FooterBox>
-    )
+      <S.Me>
+        <p>
+          designed by Tristan Plet -
+          <a href="mailto:tristan.plet@gmail.com">tristan.plet@gmail.com</a>
+        </p>
+      </S.Me>
+    </S.FooterBox>
+  );
 }

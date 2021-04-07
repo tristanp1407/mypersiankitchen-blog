@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import * as S from '../styles/AllPosts.styles'
+import * as S from "../styles/AllPosts.styles";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -32,24 +32,19 @@ export default function AllPosts() {
 
   return (
     <S.AllPostsWrapper>
-      
-        {allPostsData &&
-          allPostsData.map((post, index) => (
-          
-      <Link to={"/" + post.slug.current} key={post.slug.current} key={index}>
+      {allPostsData &&
+        allPostsData.map((post) => (
+          <Link to={"/" + post.slug.current} key={post.slug.current}>
+            <S.BlogTile>
+              <S.BlogTileImage
+                src={urlFor(post.mainImage).width(330).url()}
+                alt="main image"
+              />
 
-          <S.BlogTile>
-            
-              <S.BlogTileImage src={urlFor(post.mainImage).width(330).url()} alt="" />
-          
               <S.BlogTitle>{post.title}</S.BlogTitle>
-
-          </S.BlogTile>
-
-      </Link>
-
-          ))}
-      
+            </S.BlogTile>
+          </Link>
+        ))}
     </S.AllPostsWrapper>
   );
 }

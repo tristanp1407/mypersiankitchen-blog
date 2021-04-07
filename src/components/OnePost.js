@@ -3,10 +3,10 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
-import Footer from './Footer';
-import Logo from './Logo'
-import * as S from '../styles/OnePost.styles';
-import * as T from '../styles/Text.styles';
+import Footer from "./Footer";
+import Logo from "./Logo";
+import * as S from "../styles/OnePost.styles";
+import * as T from "../styles/Text.styles";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -42,23 +42,19 @@ export default function OnePost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    
     <S.OneBlogWrapper>
-
-      <Logo/>
+      <Logo />
 
       <S.TitleAuthorWrapper>
-
         <T.Title>{postData.title}</T.Title>
-  
+
         <S.AuthorWrapper>
           <img
             src={urlFor(postData.authorImage).width(100).url()}
-            alt="Author Photo"
+            alt="Author"
           />
           <T.P>{postData.name}</T.P>
         </S.AuthorWrapper>
-
       </S.TitleAuthorWrapper>
 
       <S.MainImageWrapper>
@@ -73,8 +69,7 @@ export default function OnePost() {
         />
       </S.BlogBodyWrapper>
 
-      <Footer/>
+      <Footer />
     </S.OneBlogWrapper>
-
   );
 }
