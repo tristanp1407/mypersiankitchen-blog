@@ -5,8 +5,8 @@ import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import Footer from "./Footer";
 import Logo from "./Logo";
-import * as S from "../styles/OnePost.styles";
-import * as T from "../styles/Text.styles";
+import * as S from "./styles/OnePost.styles";
+import * as T from "./styles/Text.styles";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {

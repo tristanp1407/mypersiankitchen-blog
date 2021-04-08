@@ -1,11 +1,10 @@
-import React from 'react';
-import * as S from '../styles/FacebookPlugin'
+import React from "react";
+import * as S from "./styles/FacebookPlugin";
 
 export default function FacebookPlugin() {
-
-    return (
-        <S.Wrapper>
-        <div
+  return (
+    <S.Wrapper>
+      <div
         class="fb-page"
         data-href="https://www.facebook.com/mypersiankitchencamb/"
         data-tabs="events"
@@ -20,12 +19,11 @@ export default function FacebookPlugin() {
           cite="https://www.facebook.com/mypersiankitchencamb/"
           class="fb-xfbml-parse-ignore"
         >
-          <a href="https://www.facebook.com/mypersiankitchencamb/"
-            >My Persian Kitchen</a
-          >
+          <a href="https://www.facebook.com/mypersiankitchencamb/">
+            My Persian Kitchen
+          </a>
         </blockquote>
-      </div>            
-        </S.Wrapper>
-
-    )
+      </div>
+    </S.Wrapper>
+  );
 }

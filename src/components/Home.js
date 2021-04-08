@@ -1,7 +1,5 @@
 import React from "react";
 import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
-import * as S from "../styles/Home.styles";
-import * as T from "../styles/Text.styles";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
 import Gallery from "./PhotoGalleries";
@@ -9,6 +7,8 @@ import SocialMedia from "./FollowUs";
 import { gallery1, gallery2 } from "./PhotoGalleries";
 import FacebookPlugin from "./FacebookPlugin";
 import Footer from "./Footer";
+import * as S from "./styles/Home.styles";
+import * as T from "./styles/Text.styles";
 
 export default function Home() {
   const downloadMenu = () => {
