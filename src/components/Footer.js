@@ -3,8 +3,8 @@ import phoneIcon from "../Assets/Icons/Contact/phone.png";
 import emailIcon from "../Assets/Icons/Contact/email.png";
 import pinIcon from "../Assets/Icons/Contact/location.png";
 import hygienRating from "../Assets/Icons/Contact/hygiene-rating.jpg";
-import * as S from "./styles/Footer.styles";
-import * as T from "./styles/Text.styles";
+import * as S from "../components/styles/Footer.styles";
+import * as T from "../components/styles/Text.styles";
 
 export default function Footer() {
   let contactLinks = {

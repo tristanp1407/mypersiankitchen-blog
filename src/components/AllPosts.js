@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import * as S from "./styles/AllPosts.styles";
+import * as S from "../components/styles/AllPosts.styles";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
