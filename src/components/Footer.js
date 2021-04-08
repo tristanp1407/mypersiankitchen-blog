@@ -17,42 +17,45 @@ export default function Footer() {
     window.open(link, "_blank");
   };
 
-  return (
-    <S.FooterBox>
-      <T.H1>GET IN TOUCH!</T.H1>
+  let SS = S;
+  let TT = T;
 
-      <T.P>
+  return (
+    <SS.FooterBox>
+      <TT.H1>GET IN TOUCH!</TT.H1>
+
+      <TT.P>
         We'd love to hear from you. For all enquiries, please call us or email
         us:
-      </T.P>
+      </TT.P>
 
-      <S.Contact>
-        <S.IconAndText onClick={() => openLink(contactLinks.email)}>
+      <SS.Contact>
+        <SS.IconAndText onClick={() => openLink(contactLinks.email)}>
           <img alt="email icon" src={emailIcon} />
           <div>mpkcontactus@gmail.com</div>
-        </S.IconAndText>
+        </SS.IconAndText>
 
-        <S.IconAndText onClick={() => openLink(contactLinks.phone)}>
+        <SS.IconAndText onClick={() => openLink(contactLinks.phone)}>
           <img alt="phone icon" src={phoneIcon} />
           <div>07580 801905</div>
-        </S.IconAndText>
-      </S.Contact>
+        </SS.IconAndText>
+      </SS.Contact>
 
-      <S.AdressLine onClick={() => openLink(contactLinks.map)}>
+      <SS.AdressLine onClick={() => openLink(contactLinks.map)}>
         <img alt="pin icon" src={pinIcon} />
         <div>Hope Street Yard, Hope St, Cambridge, CB1 3NA</div>
-      </S.AdressLine>
+      </SS.AdressLine>
 
-      <S.HygienRatingWrapper>
+      <SS.HygienRatingWrapper>
         <img alt="hygiene-rating" src={hygienRating} />
-      </S.HygienRatingWrapper>
+      </SS.HygienRatingWrapper>
 
-      <S.Me>
+      <SS.Me>
         <p>
           designed by Tristan Plet -
           <a href="mailto:tristan.plet@gmail.com">tristan.plet@gmail.com</a>
         </p>
-      </S.Me>
-    </S.FooterBox>
+      </SS.Me>
+    </SS.FooterBox>
   );
 }
