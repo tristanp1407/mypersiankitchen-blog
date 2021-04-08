@@ -91,10 +91,15 @@ export default function Footer() {
 
   const HygienRatingWrapper = styled("div")`
     height: 100px;
-    width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     padding: 19px 0 10px 0;
+
+    & img {
+      height: 100%;
+      width: auto;
+    }
   `;
 
   const Me = styled("div")`
