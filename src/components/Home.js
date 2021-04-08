@@ -1,7 +1,7 @@
 import React from "react";
 import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
 import Logo from "./Logo";
-// import AllPosts from "./AllPosts";
+import AllPosts from "./AllPosts";
 import Gallery from "./PhotoGalleries";
 import SocialMedia from "./FollowUs";
 import { gallery1, gallery2 } from "./PhotoGalleries";
@@ -85,9 +85,9 @@ export default function Home() {
 
       <SocialMedia />
 
-      {/* <T.Title>MPK Blog Article</T.Title> */}
+      <T.Title>MPK Blog Article</T.Title>
 
-      {/* <AllPosts /> */}
+      <AllPosts />
 
       <Footer />
     </S.Page>
