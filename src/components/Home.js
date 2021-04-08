@@ -85,9 +85,9 @@ export default function Home() {
 
       <SocialMedia />
 
-      <T.Title>MPK Blog Article</T.Title>
+      {/* <T.Title>MPK Blog Article</T.Title> */}
 
-      <AllPosts />
+      {/* <AllPosts /> */}
 
       <Footer />
     </S.Page>
