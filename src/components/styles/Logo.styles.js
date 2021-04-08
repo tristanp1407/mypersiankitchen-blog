@@ -1,9 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export const Logo = styled('div')`
+export const Logo = styled("div")`
   margin: 20px 0;
 
   & img {
-      height: 330px;
+    height: 315px;
+    width: 315px;
   }
-`
+`;

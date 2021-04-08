@@ -43,7 +43,8 @@ export default function AllPosts() {
 
   const BlogTile = styled("div")`
     position: relative;
-    width: 330px;
+    width: 95vw;
+    max-width: 330px;
     overflow: hidden;
     height: 250px;
     transition: 0.3s ease;
@@ -84,7 +85,7 @@ export default function AllPosts() {
           <Link to={"/" + post.slug.current} key={post.slug.current}>
             <BlogTile>
               <BlogTileImage
-                src={urlFor(post.mainImage).width(330).url()}
+                src={urlFor(post.mainImage).width(400).url()}
                 alt="main image"
               />
 
