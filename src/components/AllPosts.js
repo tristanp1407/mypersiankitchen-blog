@@ -59,6 +59,8 @@ export default function AllPosts() {
     opacity: 0.6;
     transition: 0.3s ease;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 
     &:hover {
       transform: scale(1.05);
@@ -85,7 +87,7 @@ export default function AllPosts() {
           <Link to={"/" + post.slug.current} key={post.slug.current}>
             <BlogTile>
               <BlogTileImage
-                src={urlFor(post.mainImage).width(400).url()}
+                src={urlFor(post.mainImage).width(500).url()}
                 alt="main image"
               />
 
