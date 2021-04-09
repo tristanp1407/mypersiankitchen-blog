@@ -58,7 +58,7 @@ export default function OnePost() {
       </S.TitleAuthorWrapper>
 
       <S.MainImageWrapper>
-        <img src={urlFor(postData.mainImage).width(2000).url()} alt="" />
+        <img src={urlFor(postData.mainImage).width(1500).url()} alt="" />
       </S.MainImageWrapper>
 
       <S.BlogBodyWrapper>
