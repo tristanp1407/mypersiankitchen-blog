@@ -20,6 +20,7 @@ export const AuthorWrapper = styled("div")`
   align-items: center;
   height: 40px;
   margin: 30px 0;
+  display: flex;
 
   & img {
     border-radius: 50%;
@@ -32,11 +33,19 @@ export const AuthorWrapper = styled("div")`
 
 export const MainImageWrapper = styled("div")`
   max-width: 1000px;
+  max-height: 80vh;
   width: 95vw;
   margin-bottom: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & img {
     width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
   }
 `;
 export const BlogBodyWrapper = styled("div")`
