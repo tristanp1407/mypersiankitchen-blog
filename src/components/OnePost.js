@@ -60,7 +60,7 @@ export default function OnePost() {
 
       <LazyImage
         placeholder={urlFor(postData.mainImage).width(20).url()}
-        uri={urlFor(postData.mainImage).width(1500).url()}
+        uri={urlFor(postData.mainImage).width(window.innerWidth).url()}
         render={(src, style) => (
           <S.MainImageWrapper>
             <img alt="blog main" src={src} style={style} />
