@@ -28,6 +28,11 @@ export default function Home() {
           all details in the menu.
           <br />
           <br />
+          <strong>
+            We will be taking a short break from Friday 16th April opening again
+            Monday 26th April. See you then!
+          </strong>
+          <br />
           <br />
           Nooshe Joon!
           <br />

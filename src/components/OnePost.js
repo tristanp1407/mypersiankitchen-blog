@@ -63,7 +63,7 @@ export default function OnePost() {
         uri={urlFor(postData.mainImage).width(1500).url()}
         render={(src, style) => (
           <S.MainImageWrapper>
-            <img src={src} style={style} />
+            <img alt="blog main" src={src} style={style} />
           </S.MainImageWrapper>
         )}
       />
