@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import Logo from "./Logo";
 import * as S from "./styles/OnePost.styles";
 import * as T from "./styles/Text.styles";
+import LazyImage from "react-lazy-blur-image";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -57,9 +58,19 @@ export default function OnePost() {
         </S.AuthorWrapper>
       </S.TitleAuthorWrapper>
 
-      <S.MainImageWrapper>
+      <LazyImage
+        placeholder={urlFor(postData.mainImage).width(20).url()}
+        uri={urlFor(postData.mainImage).width(1500).url()}
+        render={(src, style) => (
+          <S.MainImageWrapper>
+            <img src={src} style={style} />
+          </S.MainImageWrapper>
+        )}
+      />
+
+      {/* <S.MainImageWrapper>
         <img src={urlFor(postData.mainImage).width(1500).url()} alt="" />
-      </S.MainImageWrapper>
+      </S.MainImageWrapper> */}
 
       <S.BlogBodyWrapper>
         <BlockContent
