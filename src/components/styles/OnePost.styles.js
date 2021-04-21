@@ -10,7 +10,7 @@ export const OneBlogWrapper = styled("div")`
 
 export const TitleAuthorWrapper = styled("div")`
   justify-content: left;
-  max-width: 500px;
+  max-width: 1000px;
   width: 95vw;
 `;
 
