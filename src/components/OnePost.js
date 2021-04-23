@@ -47,7 +47,7 @@ export default function OnePost() {
       <Logo />
 
       <S.TitleAuthorWrapper>
-        <T.Title>{postData.title}</T.Title>
+        <T.BlogTitle>{postData.title}</T.BlogTitle>
 
         <S.AuthorWrapper>
           <img

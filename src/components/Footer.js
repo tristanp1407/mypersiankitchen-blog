@@ -121,14 +121,24 @@ export default function Footer() {
     }
   `;
 
+  const P = styled("p")`
+    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap");
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.025rem;
+    text-align: center;
+  `;
+
   return (
     <FooterBox>
       <T.H1>GET IN TOUCH!</T.H1>
 
-      <T.P>
+      <P>
         We'd love to hear from you. For all enquiries, please call us or email
         us:
-      </T.P>
+      </P>
 
       <Contact>
         <IconAndText onClick={() => openLink(contactLinks.email)}>
