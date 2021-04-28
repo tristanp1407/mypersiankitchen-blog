@@ -163,7 +163,7 @@ export default function Footer() {
 
       <Me>
         <p>
-          designed by Tristan Plet -
+          <span>need a website like this? - </span>
           <a href="mailto:tristan.plet@gmail.com">tristan.plet@gmail.com</a>
         </p>
       </Me>
