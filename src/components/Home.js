@@ -20,6 +20,9 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
+          <strong>We are closed until Friday 28th of May. Back soon! Merci</strong>
+          <br />
+          <br />
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
@@ -28,6 +31,7 @@ export default function Home() {
           all details in the menu.
           <br />
           <br />
+
           Nooshe Joon!
           <br />
           "May it be sweet for your soul"
