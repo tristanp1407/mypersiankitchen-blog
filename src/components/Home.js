@@ -20,15 +20,11 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
-          <strong>We are closed until Friday 28th of May. Back soon! Merci</strong>
-          <br />
-          <br />
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
           <br />
-          We offer a free 6 mile radius delivery service from Cambridge centre,
-          all details in the menu.
+          We offer a free 6-mile radius delivery service from Cambridge centre, 6-15 miles £5, all details in the menu.
           <br />
           <br />
 
@@ -88,7 +84,7 @@ export default function Home() {
 
       <SocialMedia />
 
-      <T.Title>MPK Blog Article</T.Title>
+      <T.Title>MPK Blog</T.Title>
 
       <AllPosts />
 
