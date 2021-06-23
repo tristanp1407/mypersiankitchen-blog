@@ -29,9 +29,9 @@ export default function SocialMedia() {
         <div onClick={() => openLink(socialMediaLinks.facebook)}>
           <img alt="facebook logo" src={facebook} />
         </div>
-        <div onClick={() => openLink(socialMediaLinks.deliveroo)}>
+        {/* <div onClick={() => openLink(socialMediaLinks.deliveroo)}>
           <img alt="deliveroo logo" src={deliveroo} />
-        </div>
+        </div> */}
         <div onClick={() => openLink(socialMediaLinks.instagram)}>
           <img alt="instagram logo" src={instagram} />
         </div>

@@ -57,5 +57,5 @@ export const BlogBodyWrapper = styled("div")`
   line-height: 2.5rem;
   font-size: 1.25rem;
   letter-spacing: 0.025rem;
-  text-align: center;
+  /* text-align: center; */
 `;
