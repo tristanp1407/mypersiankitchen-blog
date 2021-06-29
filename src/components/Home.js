@@ -20,14 +20,17 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
+          <strong>We are closed until the 5th of July. Back soon!</strong>
+          <br />
+          <br />
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
           <br />
-          We offer a free 6-mile radius delivery service from Cambridge centre, 6-15 miles £5, all details in the menu.
+          We offer a free 6-mile radius delivery service from Cambridge centre,
+          6-15 miles £5, all details in the menu.
           <br />
           <br />
-
           Nooshe Joon!
           <br />
           "May it be sweet for your soul"
