@@ -20,7 +20,9 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
-          <strong>We are closed until the 5th of July. Back soon!</strong>
+          <strong>
+            We are closed until Monday the 12th of July. Back soon!
+          </strong>
           <br />
           <br />
           To place a hot food order we request 24 hours notice
