@@ -21,7 +21,7 @@ export default function Home() {
       <S.BorderBox>
         <T.P>
           <strong>
-            We are closed until Monday the 12th of July. Back soon!
+            We are closed until Saturday the 24th of July. Back soon!
           </strong>
           <br />
           <br />
