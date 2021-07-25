@@ -20,11 +20,11 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
-          <strong>
+          {/* <strong>
             We are closed until Saturday the 24th of July. Back soon!
           </strong>
           <br />
-          <br />
+          <br /> */}
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
