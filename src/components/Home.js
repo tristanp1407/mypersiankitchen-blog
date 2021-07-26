@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
@@ -9,22 +9,44 @@ import FacebookPlugin from "./FacebookPlugin";
 import Footer from "./Footer";
 import * as S from "./styles/Home.styles";
 import * as T from "./styles/Text.styles";
+import sanityClient from "../client";
 
 export default function Home() {
   const downloadMenu = () => {
     window.open(Menu, "_blank");
   };
 
+  const [noticeText, setNoticeText] = useState(null);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "notice"]{
+        notice
+    }`
+      )
+      .then((data) => {
+        console.log(data[0].notice);
+        setNoticeText(data[0].notice);
+        console.log(noticeText);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
     <S.Page>
       <Logo />
       <S.BorderBox>
         <T.P>
-          {/* <strong>
-            We are closed until Saturday the 24th of July. Back soon!
-          </strong>
-          <br />
-          <br /> */}
+          {noticeText ? (
+            <>
+              <strong>
+                We are closed until Saturday the 24th of July. Back soon!
+              </strong>
+              <br />
+              <br />
+            </>
+          ) : null}
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
