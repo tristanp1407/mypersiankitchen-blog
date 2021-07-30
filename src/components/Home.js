@@ -39,9 +39,7 @@ export default function Home() {
         <T.P>
           {noticeText ? (
             <>
-              <strong>
-                We are closed until Saturday the 24th of July. Back soon!
-              </strong>
+              <strong>{noticeText}</strong>
               <br />
               <br />
             </>
