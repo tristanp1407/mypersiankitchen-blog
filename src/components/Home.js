@@ -28,7 +28,6 @@ export default function Home() {
       .then((data) => {
         console.log(data[0].notice);
         setNoticeText(data[0].notice);
-        console.log(noticeText);
       })
       .catch(console.error);
   }, []);
