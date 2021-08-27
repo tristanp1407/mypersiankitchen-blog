@@ -6,6 +6,7 @@ import hygienRating from "../Assets/Icons/Contact/hygiene-rating.jpg";
 // import * as S from "../components/styles/Footer.styles";
 import styled from "styled-components";
 import * as T from "../components/styles/Text.styles";
+import { phoneNumber } from "../common/contacts";
 
 const FooterBox = styled("div")`
   width: 100vw;
@@ -121,9 +122,9 @@ const P = styled("p")`
 `;
 
 export default function Footer() {
-  let contactLinks = {
+  const contactLinks = {
     email: "mpkcontactus@gmail.com",
-    phone: "tel:+447580801905",
+    phone: `tel:${phoneNumber}`,
     map: "https://goo.gl/maps/U7k4Kxd9W2byyNST7",
   };
 
@@ -148,7 +149,7 @@ export default function Footer() {
 
         <IconAndText onClick={() => openLink(contactLinks.phone)}>
           <img alt="phone icon" src={phoneIcon} />
-          <div>07580 801905</div>
+          <div>{phoneNumber}</div>
         </IconAndText>
       </Contact>
 

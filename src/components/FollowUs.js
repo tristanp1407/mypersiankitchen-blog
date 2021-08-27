@@ -7,6 +7,7 @@ import facebook from "../Assets/Icons/Social/fb_logo.png";
 import instagram from "../Assets/Icons/Social/insta_logo.png";
 import twitter from "../Assets/Icons/Social/twitter_logo.png";
 import whatsapp from "../Assets/Icons/Social/whatsapp_logo.png";
+import { phoneNumber } from "../common/contacts";
 
 export default function SocialMedia() {
   const openLink = (link) => {
@@ -17,7 +18,7 @@ export default function SocialMedia() {
     facebook: "https://www.facebook.com/mypersiankitchencamb/",
     instagram: "https://www.instagram.com/my.persiankitchen/",
     twitter: "https://twitter.com/mypersiancamb?lang=en",
-    whatsapp: "https://wa.me/00447580801905",
+    whatsapp: `https://wa.me/${phoneNumber}`,
     // deliveroo:
     //   "https://deliveroo.co.uk/menu/cambridge/cambridge-centre/my-persian-kitchen",
   };
