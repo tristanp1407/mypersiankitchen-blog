@@ -4,4 +4,4 @@
 //Sirous phone number
 export const phoneNumber = "07796285990";
 
-export const whatappPhoneNumber = "00447796285990";
+export const whatappPhoneNumber = "447796285990";
