@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -16,7 +16,7 @@ function urlFor(source) {
 
 export default function OnePost() {
   const [postData, setPostData] = useState(null);
-  const { slug } = useParams();
+  // const { slug } = useParams();
 
   useEffect(() => {
     sanityClient
@@ -33,12 +33,11 @@ export default function OnePost() {
          body,
         "name": author->name,
         "authorImage": author->image
-       }`,
-        { slug }
+       }`
       )
       .then((data) => setPostData(data[0]))
       .catch(console.error);
-  }, [slug]);
+  }, []);
 
   if (!postData) return <div>Loading...</div>;
 
