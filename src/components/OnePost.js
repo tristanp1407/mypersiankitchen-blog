@@ -38,7 +38,7 @@ export default function OnePost() {
       )
       .then((data) => setPostData(data[0]))
       .catch(console.error);
-  }, [slug]);
+  }, []);
 
   if (!postData) return <div>Loading...</div>;
 
