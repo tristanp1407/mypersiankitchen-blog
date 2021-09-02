@@ -17,6 +17,7 @@ function urlFor(source) {
 export default function OnePost() {
   const [postData, setPostData] = useState(null);
   const { slug } = useParams();
+  console.log(slug);
 
   useEffect(() => {
     sanityClient

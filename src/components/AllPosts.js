@@ -10,6 +10,55 @@ function urlFor(source) {
   return builder.image(source);
 }
 
+const AllPostsWrapper = styled("div")`
+  margin: 50px 0;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+`;
+
+const BlogTile = styled("div")`
+  position: relative;
+  width: 95vw;
+  max-width: 330px;
+  overflow: hidden;
+  height: 250px;
+  transition: 0.3s ease;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+`;
+
+const BlogTileImage = styled("img")`
+  opacity: 0.6;
+  transition: 0.3s ease;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const BlogTitle = styled("h2")`
+  @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap");
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  margin: 15px;
+  color: white;
+  position: absolute;
+  text-decoration: none;
+  max-width: 300px;
+  top: 0;
+  left: 0;
+`;
+
 export default function AllPosts() {
   const [allPostsData, setAllPosts] = useState(null);
 
@@ -30,55 +79,6 @@ export default function AllPosts() {
       .then((data) => setAllPosts(data))
       .catch(console.error);
   }, []);
-
-  const AllPostsWrapper = styled("div")`
-    margin: 50px 0;
-    max-width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-  `;
-
-  const BlogTile = styled("div")`
-    position: relative;
-    width: 95vw;
-    max-width: 330px;
-    overflow: hidden;
-    height: 250px;
-    transition: 0.3s ease;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5px;
-  `;
-
-  const BlogTileImage = styled("img")`
-    opacity: 0.6;
-    transition: 0.3s ease;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  `;
-
-  const BlogTitle = styled("h2")`
-    @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@300&display=swap");
-    font-family: "Playfair Display", serif;
-    font-weight: 400;
-    margin: 15px;
-    color: white;
-    position: absolute;
-    text-decoration: none;
-    max-width: 300px;
-    top: 0;
-    left: 0;
-  `;
 
   return (
     <AllPostsWrapper>
