@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
 import Gallery from "./PhotoGalleries";
@@ -12,10 +13,7 @@ import sanityClient from "../client";
 
 export default function Home() {
   const downloadMenu = () => {
-    window.open(
-      "https://drive.google.com/uc?export=download&id=1gxc4hUxt-lG3SR0zySTvgEbs0efFLybI",
-      "_blank"
-    );
+    window.open(Menu, "_blank");
   };
 
   const [noticeText, setNoticeText] = useState(null);
