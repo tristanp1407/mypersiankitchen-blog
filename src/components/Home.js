@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Menu from "../Assets/Menu/mpk-menu-2020.pdf";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
 import Gallery from "./PhotoGalleries";
