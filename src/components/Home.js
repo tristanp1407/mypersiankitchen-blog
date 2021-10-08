@@ -13,7 +13,10 @@ import sanityClient from "../client";
 
 export default function Home() {
   const downloadMenu = () => {
-    window.open(Menu, "_blank");
+    window.open(
+      "https://drive.google.com/uc?export=download&id=1gxc4hUxt-lG3SR0zySTvgEbs0efFLybI",
+      "_blank"
+    );
   };
 
   const [noticeText, setNoticeText] = useState(null);
