@@ -60,8 +60,9 @@ export const BlogBodyWrapper = styled("div")`
   overflow: hidden;
 
   figure {
+    margin: 0;
     img {
-      max-width: 70vw;
+      width: 100%;
     }
   }
 `;
