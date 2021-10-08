@@ -69,10 +69,6 @@ export default function OnePost() {
         )}
       />
 
-      {/* <S.MainImageWrapper>
-        <img src={urlFor(postData.mainImage).width(1500).url()} alt="" />
-      </S.MainImageWrapper> */}
-
       <S.BlogBodyWrapper>
         <BlockContent
           blocks={postData.body}
