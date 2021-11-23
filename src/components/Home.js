@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import AllPosts from "./AllPosts";
 import Gallery from "./PhotoGalleries";
 import SocialMedia from "./FollowUs";
-import { gallery1, gallery2 } from "./PhotoGalleries";
+// import { gallery1, gallery2 } from "./PhotoGalleries";
 import FacebookPlugin from "./FacebookPlugin";
 import Footer from "./Footer";
 import * as S from "./styles/Home.styles";
@@ -20,6 +20,8 @@ export default function Home() {
 
   const [noticeText, setNoticeText] = useState(null);
 
+  let images1;
+
   useEffect(() => {
     sanityClient
       .fetch(
@@ -34,6 +36,24 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "gallery1"]{
+        "img1": image1.asset->url,
+        "img2": image2.asset->url,
+        "img3": image3.asset->url,
+        "img4": image4.asset->url,
+        "img5": image5.asset->url,
+        "img6": image6.asset->url
+    }`
+      )
+      .then((data) => {
+        images1 = Object.values(data[0]);
+        console.log(images1);
+      })
+      .catch(console.error);
+  }, []);
   return (
     <S.Page>
       <Logo />
@@ -77,7 +97,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      <Gallery gallery={gallery1} />
+      <Gallery gallery={images1} />
 
       <SocialMedia />
 
@@ -92,7 +112,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      <Gallery gallery={gallery2} />
+      {/* <Gallery gallery={gallery2} /> */}
 
       <SocialMedia />
 
