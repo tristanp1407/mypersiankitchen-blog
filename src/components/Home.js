@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
-import Gallery from "./PhotoGalleries";
+import PhotoGallery from "./PhotoGalleries";
 import SocialMedia from "./FollowUs";
-// import { gallery1, gallery2 } from "./PhotoGalleries";
 import FacebookPlugin from "./FacebookPlugin";
 import Footer from "./Footer";
 import * as S from "./styles/Home.styles";
@@ -20,7 +19,8 @@ export default function Home() {
 
   const [noticeText, setNoticeText] = useState(null);
 
-  let images1;
+  const [galleryImages1, setGalleryImages1] = useState();
+  const [galleryImages2, setGalleryImages2] = useState();
 
   useEffect(() => {
     sanityClient
@@ -30,7 +30,6 @@ export default function Home() {
     }`
       )
       .then((data) => {
-        console.log(data[0].notice);
         setNoticeText(data[0].notice);
       })
       .catch(console.error);
@@ -39,33 +38,42 @@ export default function Home() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "gallery1"]{
-        "img1": image1.asset->url,
-        "img2": image2.asset->url,
-        "img3": image3.asset->url,
-        "img4": image4.asset->url,
-        "img5": image5.asset->url,
-        "img6": image6.asset->url
+        `*[_type == "galleries"]{
+         imageGallery1[]{
+        asset->{
+            url
+        }
+      },
+         imageGallery2[]{
+        asset->{
+            url
+        }
+      }
     }`
       )
       .then((data) => {
-        images1 = Object.values(data[0]);
-        console.log(images1);
+        setGalleryImages1(
+          data[0].imageGallery1.map((asset) => asset.asset.url)
+        );
+        setGalleryImages2(
+          data[0].imageGallery2.map((asset) => asset.asset.url)
+        );
       })
       .catch(console.error);
   }, []);
+
   return (
     <S.Page>
       <Logo />
       <S.BorderBox>
         <T.P>
-          {noticeText ? (
+          {noticeText && (
             <>
               <strong>{noticeText}</strong>
               <br />
               <br />
             </>
-          ) : null}
+          )}
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
@@ -97,7 +105,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      <Gallery gallery={images1} />
+      {galleryImages1 && <PhotoGallery images={galleryImages1} />}
 
       <SocialMedia />
 
@@ -112,7 +120,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      {/* <Gallery gallery={gallery2} /> */}
+      {galleryImages2 && <PhotoGallery images={galleryImages2} />}
 
       <SocialMedia />
 
