@@ -1,55 +1,21 @@
 export default {
-  name: "gallery1",
-  title: "Image Gallery 1",
+  name: "galleries",
+  title: "Image Galleries",
   type: "document",
   fields: [
     {
-      name: "image1",
-      title: "Image 1",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      title: "First image gallery",
+      name: "imageGallery1",
+      type: "array",
+      of: [{ title: "Image", name: "image", type: "image" }],
+      validation: (Rule) => Rule.required().min(6).max(6),
     },
     {
-      name: "image2",
-      title: "Image 2",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "image3",
-      title: "Image 3",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "image4",
-      title: "Image 4",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "image5",
-      title: "Image 5",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-    },
-    {
-      name: "image6",
-      title: "Image 6",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      title: "Second image gallery",
+      name: "imageGallery2",
+      type: "array",
+      of: [{ title: "Image", name: "image", type: "image" }],
+      validation: (Rule) => Rule.required().min(6).max(6),
     },
   ],
 };

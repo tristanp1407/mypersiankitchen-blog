@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import AllPosts from "./AllPosts";
-import Gallery from "./PhotoGalleries";
+import PhotoGallery from "./PhotoGalleries";
 import SocialMedia from "./FollowUs";
-import { gallery1, gallery2 } from "./PhotoGalleries";
 import FacebookPlugin from "./FacebookPlugin";
 import Footer from "./Footer";
 import * as S from "./styles/Home.styles";
@@ -20,6 +19,9 @@ export default function Home() {
 
   const [noticeText, setNoticeText] = useState(null);
 
+  const [galleryImages1, setGalleryImages1] = useState();
+  const [galleryImages2, setGalleryImages2] = useState();
+
   useEffect(() => {
     sanityClient
       .fetch(
@@ -28,8 +30,34 @@ export default function Home() {
     }`
       )
       .then((data) => {
-        console.log(data[0].notice);
         setNoticeText(data[0].notice);
+      })
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "galleries"]{
+         imageGallery1[]{
+        asset->{
+            url
+        }
+      },
+         imageGallery2[]{
+        asset->{
+            url
+        }
+      }
+    }`
+      )
+      .then((data) => {
+        setGalleryImages1(
+          data[0].imageGallery1.map((asset) => asset.asset.url)
+        );
+        setGalleryImages2(
+          data[0].imageGallery2.map((asset) => asset.asset.url)
+        );
       })
       .catch(console.error);
   }, []);
@@ -39,13 +67,13 @@ export default function Home() {
       <Logo />
       <S.BorderBox>
         <T.P>
-          {noticeText ? (
+          {noticeText && (
             <>
               <strong>{noticeText}</strong>
               <br />
               <br />
             </>
-          ) : null}
+          )}
           To place a hot food order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
@@ -77,7 +105,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      <Gallery gallery={gallery1} />
+      {galleryImages1 && <PhotoGallery images={galleryImages1} />}
 
       <SocialMedia />
 
@@ -92,7 +120,7 @@ export default function Home() {
         </T.P>
       </S.TextWrapper>
 
-      <Gallery gallery={gallery2} />
+      {galleryImages2 && <PhotoGallery images={galleryImages2} />}
 
       <SocialMedia />
 
