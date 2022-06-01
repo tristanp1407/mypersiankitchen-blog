@@ -9,6 +9,7 @@ export const Container = styled("div")`
   display: flex;
   gap: 10px;
   margin: 30px;
+  max-width: 400px;
   padding: 20px 24px;
   position: fixed;
   right: 0;

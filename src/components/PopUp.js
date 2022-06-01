@@ -38,18 +38,17 @@ export default function PopUp() {
   const contactView = (
     <S.List>
       <li>
-        <h3>Let's talk!</h3>
+        <h3>Hey, I'm Tristan</h3>
       </li>
-      <br />
-
-      <li>Need a new website building?</li>
-      <li>Need to improve a current website?</li>
-      <li>Want to start selling online?</li>
+      <li>I hope you like this website!</li>
       <br />
       <li>
-        Get in touch by emailing <strong>tristan.plet@gmail.com</strong>{" "}
-        &#128578;
+        If you need a new website, or would like to improve your current one,
+        feel free to get in touch be emailing me at{" "}
+        <strong>tristan.plet@gmail.com</strong>
       </li>
+      <br />
+      <li>I'd love to hear from you &#128578;</li>
       <br />
       <S.Button onClick={() => setShowPopUp(false)}>Close</S.Button>
     </S.List>
