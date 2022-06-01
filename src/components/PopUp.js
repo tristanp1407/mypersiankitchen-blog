@@ -16,7 +16,7 @@ export default function PopUp() {
 
   const firstView = (
     <>
-      <img src={waveImg} height={25} width={25} />
+      <img src={waveImg} height={25} width={25} alt="waving hand emoji" />
       Need a website like this?{" "}
       <S.Button
         onClick={() => {
