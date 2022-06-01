@@ -23,14 +23,15 @@ export default function PopUp() {
           setShowContact(true);
         }}
       >
-        Yes
+        More info
       </S.Button>
       <S.Button
+        style={{ textDecoration: "none" }}
         onClick={() => {
           setShowPopUp(false);
         }}
       >
-        No
+        X
       </S.Button>
     </>
   );
