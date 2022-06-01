@@ -78,8 +78,8 @@ export default function Home() {
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
           <br />
-          We offer a free 6-mile radius delivery service from Cambridge centre,
-          6-15 miles £5, all details in the menu.
+          We offer a free 3-mile radius delivery service from Cambridge centre,
+          3-10 miles £3-6 depending on distance, all details in the menu.
           <br />
           <br />
           Nooshe Joon!
