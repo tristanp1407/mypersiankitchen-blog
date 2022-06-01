@@ -28,6 +28,8 @@ export const BorderBox = styled("div")`
 
 export const Button = styled("button")`
   border: 1px solid black;
+  color: black;
+  text-decoration: none;
   font-family: "Raleway", sans-serif;
   background-color: white;
   font-weight: 300;
