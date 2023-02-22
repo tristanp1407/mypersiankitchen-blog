@@ -88,7 +88,7 @@ export default function Home() {
           <br />
           <br />
         </T.P>
-        <S.Button onClick={downloadMenu}>Download Menu</S.Button>
+        <S.Button onClick={downloadMenu}>View Menu</S.Button>
       </S.BorderBox>
 
       <T.Title>About Us</T.Title>
