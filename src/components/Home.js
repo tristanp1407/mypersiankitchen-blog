@@ -12,7 +12,7 @@ import sanityClient from "../client";
 export default function Home() {
   const downloadMenu = () => {
     window.open(
-      "https://drive.google.com/uc?export=download&id=1gxc4hUxt-lG3SR0zySTvgEbs0efFLybI",
+      "https://drive.google.com/file/d/1GdKrmtPc8O847zlOg0R3g6ZCtN4BucKm/view?usp=sharing",
       "_blank"
     );
   };
