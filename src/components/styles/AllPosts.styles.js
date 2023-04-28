@@ -45,3 +45,25 @@ export const BlogTitle = styled("h2")`
   top: 0;
   left: 0;
 `;
+
+export const ReadButton = styled("button")`
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 8px 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer !important;
+  transition: 0.3s;
+  font-family: "Playfair Display", serif;
+  text-decoration: none;
+
+  &:after {
+    content: "→";
+    display: inline-block;
+    margin-left: 5px;
+  }
+`;

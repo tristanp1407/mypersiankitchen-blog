@@ -4,6 +4,7 @@ import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 // import * as S from "../components/styles/AllPosts.styles";
 import styled from "styled-components";
+import { ReadButton } from "./styles/AllPosts.styles.js";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -92,6 +93,7 @@ export default function AllPosts() {
               />
 
               <BlogTitle>{post.title}</BlogTitle>
+              <ReadButton>Read</ReadButton>
             </BlogTile>
           </Link>
         ))}
