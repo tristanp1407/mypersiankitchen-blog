@@ -21,6 +21,7 @@ export default function Home() {
 
   const [galleryImages1, setGalleryImages1] = useState();
   const [galleryImages2, setGalleryImages2] = useState();
+  const [galleryImages3, setGalleryImages3] = useState();
 
   useEffect(() => {
     sanityClient
@@ -49,6 +50,11 @@ export default function Home() {
             url
         }
       }
+         imageGallery3[]{
+        asset->{
+            url
+        }
+      }
     }`
       )
       .then((data) => {
@@ -57,6 +63,9 @@ export default function Home() {
         );
         setGalleryImages2(
           data[0].imageGallery2.map((asset) => asset.asset.url)
+        );
+        setGalleryImages3(
+          data[0].imageGallery3.map((asset) => asset.asset.url)
         );
       })
       .catch(console.error);
@@ -133,6 +142,8 @@ export default function Home() {
           upcoming events.
         </T.P>
       </S.TextWrapper>
+
+      {galleryImages3 && <PhotoGallery images={galleryImages3} />}
 
       <FacebookPlugin />
 
