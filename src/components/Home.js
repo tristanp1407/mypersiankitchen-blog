@@ -49,7 +49,7 @@ export default function Home() {
         asset->{
             url
         }
-      }
+      },
          imageGallery3[]{
         asset->{
             url
@@ -58,14 +58,16 @@ export default function Home() {
     }`
       )
       .then((data) => {
+        const sizeStr = "?w=300&h=300&fit=crop";
+
         setGalleryImages1(
-          data[0].imageGallery1.map((asset) => asset.asset.url)
+          data[0].imageGallery1.map((asset) => asset.asset.url + sizeStr)
         );
         setGalleryImages2(
-          data[0].imageGallery2.map((asset) => asset.asset.url)
+          data[0].imageGallery2.map((asset) => asset.asset.url + sizeStr)
         );
         setGalleryImages3(
-          data[0].imageGallery3.map((asset) => asset.asset.url)
+          data[0].imageGallery3.map((asset) => asset.asset.url + sizeStr)
         );
       })
       .catch(console.error);
