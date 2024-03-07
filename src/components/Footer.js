@@ -162,6 +162,10 @@ export default function Footer() {
         <img alt="hygiene-rating" src={hygienRating} />
       </HygienRatingWrapper>
 
+      <AdressLine>
+        <p>© 2024 MY PERSIAN KITCHEN</p>
+      </AdressLine>
+
       <Me>
         <p>
           <span>need a website like this? - </span>
