@@ -153,11 +153,6 @@ export default function Footer() {
         </IconAndText>
       </Contact>
 
-      <AdressLine onClick={() => openLink(contactLinks.map)}>
-        <img alt="pin icon" src={pinIcon} />
-        <div>Hope Street Yard, Hope St, Cambridge, CB1 3NA</div>
-      </AdressLine>
-
       <HygienRatingWrapper>
         <img alt="hygiene-rating" src={hygienRating} />
       </HygienRatingWrapper>
