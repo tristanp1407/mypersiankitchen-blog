@@ -1,7 +1,6 @@
 import React from "react";
 import phoneIcon from "../Assets/Icons/Contact/phone.png";
 import emailIcon from "../Assets/Icons/Contact/email.png";
-import pinIcon from "../Assets/Icons/Contact/location.png";
 import hygienRating from "../Assets/Icons/Contact/hygiene-rating.jpg";
 // import * as S from "../components/styles/Footer.styles";
 import styled from "styled-components";
