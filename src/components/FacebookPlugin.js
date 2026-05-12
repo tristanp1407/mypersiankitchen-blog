@@ -1,34 +1,33 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as S from "./styles/FacebookPlugin";
 
-export default function FacebookPlugin() {
-  useEffect(() => {
-    if (window.FB && window.FB.XFBML) {
-      window.FB.XFBML.parse();
-    }
-  }, []);
+const pageUrl = "https://www.facebook.com/mypersiankitchencamb/";
 
+const params = new URLSearchParams({
+  href: pageUrl,
+  tabs: "events",
+  width: "320",
+  height: "500",
+  small_header: "false",
+  adapt_container_width: "false",
+  hide_cover: "false",
+  show_facepile: "true",
+});
+
+export default function FacebookPlugin() {
   return (
     <S.Wrapper>
-      <div
-        className="fb-page"
-        data-href="https://www.facebook.com/376632542536897"
-        data-tabs="events"
-        data-width="320"
-        data-small-header="false"
-        data-adapt-container-width="false"
-        data-hide-cover="false"
-        data-show-facepile="true"
-      >
-        <blockquote
-          cite="https://www.facebook.com/376632542536897"
-          className="fb-xfbml-parse-ignore"
-        >
-          <a href="https://www.facebook.com/376632542536897">
-            My Persian Kitchen
-          </a>
-        </blockquote>
-      </div>
+      <iframe
+        title="My Persian Kitchen on Facebook"
+        src={`https://www.facebook.com/plugins/page.php?${params.toString()}`}
+        width="320"
+        height="500"
+        style={{ border: "none", overflow: "hidden" }}
+        scrolling="no"
+        frameBorder="0"
+        allowFullScreen={true}
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      />
     </S.Wrapper>
   );
 }
