@@ -85,12 +85,12 @@ export default function Home() {
               <br />
             </>
           )}
-          To place a hot food order we request 24 hours notice
+          To place an order we request 24 hours notice
           <br /> ...Persian slow-cooked food can't be rushed!
           <br />
           <br />
-          We offer a free 3-mile radius delivery service from Cambridge centre,
-          3-10 miles £3-6 depending on distance, all details in the menu.
+          We offer a delivery service up to 5 miles from Cambridge city centre,
+          £4 (for anything beyond 5 miles please get in touch).
           <br />
           <br />
           Nooshe Joon!
