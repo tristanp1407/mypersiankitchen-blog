@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles/FacebookPlugin";
 
 export default function FacebookPlugin() {
+  useEffect(() => {
+    if (window.FB && window.FB.XFBML) {
+      window.FB.XFBML.parse();
+    }
+  }, []);
+
   return (
     <S.Wrapper>
       <div
-        class="fb-page"
+        className="fb-page"
         data-href="https://www.facebook.com/mypersiankitchencamb/"
         data-tabs="events"
         data-width="320"
-        data-height
         data-small-header="false"
         data-adapt-container-width="false"
         data-hide-cover="false"
@@ -17,7 +22,7 @@ export default function FacebookPlugin() {
       >
         <blockquote
           cite="https://www.facebook.com/mypersiankitchencamb/"
-          class="fb-xfbml-parse-ignore"
+          className="fb-xfbml-parse-ignore"
         >
           <a href="https://www.facebook.com/mypersiankitchencamb/">
             My Persian Kitchen
