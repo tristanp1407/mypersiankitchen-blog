@@ -12,7 +12,7 @@ export default function FacebookPlugin() {
     <S.Wrapper>
       <div
         className="fb-page"
-        data-href="https://www.facebook.com/mypersiankitchencamb/"
+        data-href="https://www.facebook.com/376632542536897"
         data-tabs="events"
         data-width="320"
         data-small-header="false"
@@ -21,10 +21,10 @@ export default function FacebookPlugin() {
         data-show-facepile="true"
       >
         <blockquote
-          cite="https://www.facebook.com/mypersiankitchencamb/"
+          cite="https://www.facebook.com/376632542536897"
           className="fb-xfbml-parse-ignore"
         >
-          <a href="https://www.facebook.com/mypersiankitchencamb/">
+          <a href="https://www.facebook.com/376632542536897">
             My Persian Kitchen
           </a>
         </blockquote>
