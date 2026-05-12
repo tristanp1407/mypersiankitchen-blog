@@ -5,7 +5,7 @@ const pageUrl = "https://www.facebook.com/mypersiankitchencamb/";
 
 const params = new URLSearchParams({
   href: pageUrl,
-  tabs: "events",
+  tabs: "timeline",
   width: "320",
   height: "500",
   small_header: "false",
