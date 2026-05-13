@@ -157,7 +157,7 @@ export default function Footer() {
       </HygienRatingWrapper>
 
       <AdressLine>
-        <p>© 2024 MY PERSIAN KITCHEN</p>
+        <p>© 2026 MY PERSIAN KITCHEN</p>
       </AdressLine>
 
       <Me>
